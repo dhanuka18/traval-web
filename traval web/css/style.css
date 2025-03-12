@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+
+/* Navbar Start */
+.navbar{
+    background-color: #F5FCFF;
+    padding: 0px 10% 0px;
+    transition: all .50s ease;
+}
+.navbar-brand{
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+}
+.nav-item .nav-link{
+    font-size: 18px;
+    font-weight: 550;
+    color: black;
+}
+/* Navbar End */
+
+
+/* Home Section Start */
+section{
+    transition: all .50s ease;
+}
+.home{
+    padding: 90px 11% 90px;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 0;
+}
+.home .img{
+    flex: 1 1 300px;
+}
+.home .img img{
+    width: 100%;
+}
+.home-content{
+    flex: 1 1 400px;
+}
+.home .home-content p{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.home .home-content h1{
+    color: black;
+    font-size: 42px;
+    font-weight: 700;
+}
+.home button{
+    position: relative;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 7px;
+    border: 1px solid blue;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: blue;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+.home button:hover{
+    color: #fff;
+    background-color: blue;
+    box-shadow: 0 0 30px 5px blue;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.home button:hover::before{
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+.home button::before{
+    content: ' ';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: blue;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+@keyframes sh02 {
+    from{
+        opacity: 0;
+        left: 0%;
+    }
+    50% {
+        opacity: 1;  
+    }
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+button:active{
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+
+}
+@media(max-width:990px){
+    .home .text{
+        font-size: 30px;
+    }
+    .home p{
+        font-size: 20px;
+    }
+}
+@media(max-width:903px){
+    .home{
+        height: auto;
+    }
+}
+/* Home Section End */
+
+
+
+/* Offer Section Start */
+.offers{
+    padding: 60px 11% 60px;
+    background-color: #F5FCFF;
+    transition: all .50s ease;
+}
+.offers h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.offers .card{
+    padding: 20px;
+    border: none;
+    box-shadow: rgba(0,0,0, 0.1) 0px 4px 12px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.offers .card i{
+    font-size: 25px;
+    color: blue;
+}
+.offers .card h5{
+    margin-top: 10px;
+}
+/* Offer Section End */
+
+
+
+/* Popular Destination Start */
+.popular{
+    padding: 60px 11% 60px;
+    transition: all .50s ease;
+}
+.popular h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.popular .card{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.popular .card img{
+    border-radius: 10px;
+}
+.popular .card-img-overlay h3{
+    color: black;
+}
+.popular .card-img-overlay h6{
+    color:white;
+}
+/* Popular Destination End */
+
+
+
+/* ABout Section Start */
+.about{
+    padding: 100px 11% 100px;
+    background-color: #F5FCFF;
+    transition: all .50s ease;
+}
+.about .card{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.about .card img{
+    border-radius: 10px;
+}
+.about-btn{
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.about-btn:hover{
+    width: 135px;
+}
+/* ABout Section End */
+
+
+/* Packages Section Start */
+.packages{
+    padding: 100px 11% 100px;
+    transition: all .50s ease;
+}
+.packages h1{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.packages .card{
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0, 0.1) 0px 4px 12px;
+}
+.packages .card img{
+    padding: 10px;
+}
+.packages .card-body h3{
+    font-size: 25px;
+}
+.packages .row{
+    margin-top: 20px;
+}
+.rating i{
+    color: orange;
+}
+.packages h5{
+    margin-top: 10px;
+    font-size: 18px;
+}
+.packages h5 button{
+    float: right;
+    width: 100px;
+    background: transparent;
+    border-radius: 5px;
+    color: blue;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.packages h5 button:hover{
+    background-color: blue;
+    color: white;
+}
+/* Packages Section End */
+
+
+/* Review Section Start */
+.reviews{
+    padding: 100px 11% 100px;
+    background-color: #F5FCFF;
+    transition: all .50s ease;
+}
+.reviews h3{
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.reviews .card{
+    padding: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.reviews .card:hover{
+    background-color: blue;
+    color: white;
+}
+.reviews img{
+    width: 35px;
+}
+.star{
+    margin-top: 20px;
+}
+.star i{
+    color: orange;
+}
+/* Review Section End */
+
+
+
+/* Contact Section Start */
+.contact{
+    padding: 100px 11% 100px;
+    transition: all .50s ease;
+}
+.contact h1{
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.contact h5{
+    margin-top: 15px;
+    font-size: 15px;
+}
+.social h3{
+    margin-top: 20px;
+    font-weight: bold;
+}
+.social i{
+    padding: 10px;
+    background: transparent;
+    color: blue;
+    border: 2px solid blue;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.social i:hover{
+    background-color: blue;
+    color: white;
+}
+.contact .col-md-5{
+    background-color: #F5FCFF;
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0, 0.1) 0px 4px 12px;
+    cursor: pointer;
+}
+.contact h2{
+    font-size: 25px;
+}
+.form-control{
+    resize: none;
+}
+.contact button{
+    background-color: blue;
+    width: 150px;
+    color: white;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.contact button:hover{
+    width: 170px;
+}
+/* Contact Section End */
+
+
+/* Footer Start */
+#footer{
+    margin-top: 50px;
+    padding: 50px 11% 50px;
+    background-color: #F5FCFF;
+    transition: all .50s ease;
+}
+#footer h3{
+    font-weight: 600;
+}
+#footer ul li a{
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#footer ul li a:hover{
+    color: blue;
+}
+#footer ul li{
+    list-style-type: none;
+}
+#footer h5{
+    padding: 0px 3% 0px;
+    font-size: 15px;
+}
+/* Footer End */
